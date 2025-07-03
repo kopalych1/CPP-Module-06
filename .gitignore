@@ -1,5 +1,5 @@
 ex01/Serializer
-
+ex02/Identify
 
 
 
@@ -35,7 +35,7 @@ tags
 ###  VScode .gitignore
 
 .vscode/*
-!.vscode/settings.json
+#!.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
