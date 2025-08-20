@@ -11,25 +11,25 @@
 /* ************************************************************************** */
 
 #ifndef BASE_HPP
-# define BASE_HPP
+#define BASE_HPP
 
-# include <cstdlib>
-# include <iostream>
-# include <ctime>
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
 
-# include "colors.hpp"
+#include "colors.hpp"
 
 class Base {
-	public:
-		virtual	~Base() {};
+   public:
+	virtual ~Base(){};
 };
 
-class A: public Base{};
-class B: public Base{};
-class C: public Base{};
+class A : public Base {};
+class B : public Base {};
+class C : public Base {};
 
-Base	*generate(void);
-void	identify(Base *p);
-void	identify(Base &p);
+Base *generate(void);
+void identify(Base *p);
+void identify(Base &p);
 
-#endif // BASE_HPP
+#endif  // BASE_HPP

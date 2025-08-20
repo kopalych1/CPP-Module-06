@@ -6,18 +6,16 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 16:43:23 by akostian          #+#    #+#             */
-/*   Updated: 2025/06/28 16:53:49 by akostian         ###   ########.fr       */
+/*   Updated: 2025/08/20 21:42:21 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ScalarConverter.hpp"
 
-int main(int argc, char **argv)
-{
-	if (argc != 2)
-	{
-		std::cout << RED "Incorrect arguments" CRESET " usage:" << "\n";
-		std::cout << "./Converter " CYN "<number>" CRESET << "\n";
+int main(int argc, char **argv) {
+	if (argc != 2) {
+		std::cout << colors::red_bbold << "Incorrect arguments" << colors::reset << " usage:" << "\n";
+		std::cout << "./Converter " << colors::cyan_bbold << "<number>" << colors::reset << "\n";
 		return 1;
 	}
 
