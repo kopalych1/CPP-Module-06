@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 11:40:28 by akostian          #+#    #+#             */
-/*   Updated: 2025/08/20 21:34:15 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/21 08:39:54 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,15 @@
 #include "Data.hpp"
 
 class Serializer {
-   public:
+   private:
 	Serializer(){};
 	Serializer(const Serializer& other) { (void)other; };
 	Serializer& operator=(const Serializer& other) {
 		(void)other;
 		return *this;
 	};
+
+   public:
 	virtual ~Serializer() = 0;
 
 	static uintptr_t serialize(Data* ptr);

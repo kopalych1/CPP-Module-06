@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 11:33:37 by akostian          #+#    #+#             */
-/*   Updated: 2025/08/20 21:34:10 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/21 08:41:53 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int main() {
 		uintptr_t ptr = Serializer::serialize(data1);
 		Data data2 = *(Serializer::deserialize(ptr));
 
+		std::cout << "address: " << ptr << "\n";
 		std::cout << "After:" << "\n";
 		std::cout << "- " << data2.name << "\n";
 		std::cout << "- " << data2.age << "\n";
