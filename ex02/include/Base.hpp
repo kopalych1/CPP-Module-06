@@ -6,16 +6,12 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 21:01:10 by akostian          #+#    #+#             */
-/*   Updated: 2025/07/03 22:22:46 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/21 08:45:21 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BASE_HPP
 #define BASE_HPP
-
-#include <cstdlib>
-#include <ctime>
-#include <iostream>
 
 #include "colors.hpp"
 

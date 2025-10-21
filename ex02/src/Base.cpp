@@ -6,11 +6,16 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 20:58:25 by akostian          #+#    #+#             */
-/*   Updated: 2025/08/20 21:16:40 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/21 08:45:45 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Base.hpp"
+
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+#include <typeinfo>
 
 Base* generate(void) {
 	const std::string messages[3] = {
@@ -51,18 +56,18 @@ void identify(Base& p) {
 		(void)dynamic_cast<A&>(p);
 		std::cout << colors::green_bbold_bul << "A identified" << colors::reset << "\n";
 		return;
-	} catch (const std::exception& e) {
+	} catch (const std::bad_cast& e) {
 	}
 	try {
 		(void)dynamic_cast<B&>(p);
 		std::cout << colors::magenta_bbold_bul << "B identified" << colors::reset << "\n";
 		return;
-	} catch (const std::exception& e) {
+	} catch (const std::bad_cast& e) {
 	}
 	try {
 		(void)dynamic_cast<C&>(p);
 		std::cout << colors::blue_bbold_bul << "C identified" << colors::reset << "\n";
 		return;
-	} catch (const std::exception& e) {
+	} catch (const std::bad_cast& e) {
 	}
 }
