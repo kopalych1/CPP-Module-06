@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 11:40:28 by akostian          #+#    #+#             */
-/*   Updated: 2025/10/21 08:39:54 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/27 15:12:55 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,9 @@
 
 class Serializer {
    private:
-	Serializer(){};
-	Serializer(const Serializer& other) { (void)other; };
-	Serializer& operator=(const Serializer& other) {
-		(void)other;
-		return *this;
-	};
+	Serializer();
+	Serializer(const Serializer& other);
+	Serializer& operator=(const Serializer& other);
 
    public:
 	virtual ~Serializer() = 0;

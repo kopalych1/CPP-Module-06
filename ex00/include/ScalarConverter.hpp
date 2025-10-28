@@ -6,7 +6,7 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 16:41:14 by akostian          #+#    #+#             */
-/*   Updated: 2025/10/21 08:34:44 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/27 15:21:19 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,9 @@
 
 class ScalarConverter {
    private:
-	ScalarConverter(){};
-	ScalarConverter(const ScalarConverter& other) { (void)other; };
-	ScalarConverter& operator=(const ScalarConverter& other) {
-		(void)other;
-		return *this;
-	};
+	ScalarConverter();
+	ScalarConverter(const ScalarConverter& other);
+	ScalarConverter& operator=(const ScalarConverter& other);
 
    public:
 	virtual ~ScalarConverter() = 0;

@@ -6,16 +6,18 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 20:58:25 by akostian          #+#    #+#             */
-/*   Updated: 2025/10/21 08:45:45 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/27 22:27:48 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Base.hpp"
+#include "Base.hpp"
 
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
 #include <typeinfo>
+
+Base::~Base() {}
 
 Base* generate(void) {
 	const std::string messages[3] = {

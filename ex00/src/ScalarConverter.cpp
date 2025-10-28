@@ -6,11 +6,18 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:30:50 by akostian          #+#    #+#             */
-/*   Updated: 2025/08/20 21:42:59 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/28 12:20:44 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ScalarConverter.hpp"
+#include "ScalarConverter.hpp"
+
+ScalarConverter::ScalarConverter(){};
+ScalarConverter::ScalarConverter(const ScalarConverter& other) { (void)other; };
+ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other) {
+	(void)other;
+	return *this;
+};
 
 static void printChar(double val) {
 	std::cout << "Char:\t";

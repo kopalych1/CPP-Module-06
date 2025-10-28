@@ -6,14 +6,14 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 11:33:37 by akostian          #+#    #+#             */
-/*   Updated: 2025/10/21 08:41:53 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/28 12:23:26 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-#include "../include/Data.hpp"
-#include "../include/Serializer.hpp"
+#include "Data.hpp"
+#include "Serializer.hpp"
 
 int main() {
 	{

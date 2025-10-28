@@ -6,11 +6,11 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 16:43:23 by akostian          #+#    #+#             */
-/*   Updated: 2025/08/20 21:42:21 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/28 12:21:55 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ScalarConverter.hpp"
+#include "ScalarConverter.hpp"
 
 int main(int argc, char **argv) {
 	if (argc != 2) {
