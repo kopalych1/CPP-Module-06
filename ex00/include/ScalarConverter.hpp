@@ -6,14 +6,12 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 16:41:14 by akostian          #+#    #+#             */
-/*   Updated: 2025/10/27 15:21:19 by akostian         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:19:37 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-#include <climits>
-#include <iostream>
 #include <string>
 
 #include "colors.hpp"
