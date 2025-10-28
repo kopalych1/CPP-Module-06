@@ -6,33 +6,28 @@
 #    By: akostian <akostian@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/10 14:47:56 by akostian          #+#    #+#              #
-#    Updated: 2025/07/03 22:02:35 by akostian         ###   ########.fr        #
+#    Updated: 2025/10/28 12:17:52 by akostian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 NAME				= Identify
 
 VPATH				= src
 
-SRC_DIR				= .
+SRC_DIR				= src
 SRCS				= main.cpp \
 					  Base.cpp
 
-INC_DIR				= .
+INC_DIR				= include
 INCLUDES			= -I$(INC_DIR)
 
 BUILD_DIR			= build
-LOG_DIR				= logs
 
 OBJS				= $(addprefix $(BUILD_DIR)/, $(SRCS:%.cpp=%.o))
 DEPS				= $(OBJS:.o=.d)
 
 CC					= c++
 CFLAGS				= -Wall -Wextra -Werror -g3 -std=c++98 -MMD
-
-NORMINETTE			= norminette
-NORMINETTE_FLAGS	= --use-gitignore
 
 RM					= rm -rf
 
@@ -43,7 +38,7 @@ all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(INCLUDES) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 #
 
 
@@ -57,7 +52,7 @@ $(LOG_DIR):
 
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 #
 
 
@@ -79,8 +74,8 @@ fclean:
 #
 
 re:
-	@$(MAKE) fclean
-	@$(MAKE) all
+	@$(MAKE) --no-print-directory fclean
+	@$(MAKE) --no-print-directory all
 #
 
 

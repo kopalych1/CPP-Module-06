@@ -6,7 +6,7 @@
 #    By: akostian <akostian@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/26 16:43:30 by akostian          #+#    #+#              #
-#    Updated: 2025/06/28 16:47:49 by akostian         ###   ########.fr        #
+#    Updated: 2025/10/28 12:17:53 by akostian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,16 +22,12 @@ INC_DIR				= include
 INCLUDES			= -I$(INC_DIR)
 
 BUILD_DIR			= build
-LOG_DIR				= logs
 
 OBJS				= $(addprefix $(BUILD_DIR)/, $(SRCS:%.cpp=%.o))
 DEPS				= $(OBJS:.o=.d)
 
 CC					= c++
 CFLAGS				= -Wall -Wextra -Werror -g3 -std=c++98 -MMD
-
-NORMINETTE			= norminette
-NORMINETTE_FLAGS	= --use-gitignore
 
 RM					= rm -rf
 
@@ -42,7 +38,7 @@ all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(INCLUDES) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 #
 
 
@@ -56,7 +52,7 @@ $(LOG_DIR):
 
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 #
 
 
